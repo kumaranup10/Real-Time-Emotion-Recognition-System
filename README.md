@@ -1,216 +1,73 @@
-# Real-Time Emotion Recognition System
+# Project Name : Emotion-recognition
+# Table of Content :
+1.[Description](#p1)
 
-## 📌 Project Overview
+2.[Installations](#p2)
 
-The Real-Time Emotion Recognition System is a computer vision and deep learning-based application that detects human emotions from facial expressions in real time. The system captures video through a webcam, detects faces, and classifies emotions such as Happy, Sad, Angry, Fear, Surprise, Disgust, and Neutral using a Convolutional Neural Network (CNN).
+3.[Usage](#p3)
 
-This project demonstrates the integration of Computer Vision, Deep Learning, and Real-Time Analytics to create an intelligent emotion detection system.
+4.[Dataset](#p4)
 
----
 
-## 🚀 Features
 
-- Real-time face detection using webcam
-- Emotion classification using CNN
-- Supports 7 emotion categories:
-  - Happy 😊
-  - Sad 😔
-  - Angry 😠
-  - Fear 😨
-  - Surprise 😲
-  - Disgust 🤢
-  - Neutral 😐
-- Live emotion display on video feed
-- High accuracy emotion prediction
-- Lightweight and easy to deploy
+![](https://github.com/omar178/Emotion-recognition/blob/master/emotions/Happy.PNG)
+![](https://github.com/omar178/Emotion-recognition/blob/master/emotions/angry.PNG)
 
----
 
-## 🛠️ Technologies Used
 
-### Programming Language
-- Python
 
-### Libraries & Frameworks
-- OpenCV
-- TensorFlow
-- Keras
-- NumPy
-- Matplotlib
+<a id="p1"></a> 
+# Description:
 
-### Deep Learning
-- Convolutional Neural Network (CNN)
+Our Human face is having a mixed emotions so we are to demonstrate the probabilities of these emotions that we have.
 
-### Development Tools
-- Jupyter Notebook
-- VS Code
+## What does Emotion Recognition mean?
 
----
+Emotion recognition is a technique used in software that allows a program to "read" the emotions on a human face using advanced image processing. Companies have been experimenting with combining sophisticated algorithms with image processing techniques that have emerged in the past ten years to understand more about what an image or a video of a person's face tells us about how he/she is feeling and not just that but also showing the probabilities of mixed emotions a face could has.
 
-## 📂 Dataset
+<a id="p2"></a> 
+# Installations:
 
-This project uses the **FER-2013 (Facial Expression Recognition 2013)** dataset.
+Install dependencies using requirements.txt
 
-### Dataset Details
-- Total Images: 35,887
-- Image Size: 48 × 48 pixels
-- Type: Grayscale Images
-- Emotion Classes:
-  - Angry
-  - Disgust
-  - Fear
-  - Happy
-  - Sad
-  - Surprise
-  - Neutral
-
-Dataset Link:
-https://www.kaggle.com/datasets/msambare/fer2013
-
----
-
-## ⚙️ System Architecture
-
-```text
-Webcam Input
-      │
-      ▼
-Face Detection (OpenCV)
-      │
-      ▼
-Image Preprocessing
-      │
-      ▼
-CNN Model
-      │
-      ▼
-Emotion Prediction
-      │
-      ▼
-Display Result
-```
-
----
-
-## 🔄 Working Procedure
-
-1. Capture video from webcam.
-2. Detect face using OpenCV Haar Cascade.
-3. Convert image into grayscale format.
-4. Resize image according to model requirements.
-5. Feed image into trained CNN model.
-6. Predict emotion.
-7. Display detected emotion on screen in real time.
-
----
-
-## 📊 Model Performance
-
-### Key Metrics
-- Accuracy: ~90%
-- Real-Time Emotion Detection
-- Low Latency Prediction
-
----
-
-## 📁 Project Structure
-
-```text
-Real-Time-Emotion-Recognition/
-│
-├── dataset/
-├── model/
-│   ├── emotion_model.h5
-│
-├── haarcascade/
-│   ├── haarcascade_frontalface_default.xml
-│
-├── notebooks/
-│   ├── training.ipynb
-│
-├── src/
-│   ├── emotion_detection.py
-│
-├── requirements.txt
-├── README.md
-└── LICENSE
-```
-
----
-
-## ▶️ Installation
-
-### Clone Repository
-
-```bash
-git clone https://github.com/your-username/Real-Time-Emotion-Recognition.git
-```
-
-### Navigate to Project Folder
-
-```bash
-cd Real-Time-Emotion-Recognition
-```
-
-### Install Dependencies
-
-```bash
+```shell
 pip install -r requirements.txt
 ```
 
----
+<a id="p3"></a> 
+# Usage:
 
-## ▶️ Run the Project
+The program will creat a window to display the scene capture by webcamera and a window representing the probabilities of detected emotions.
 
-```bash
-python emotion_detection.py
-```
+> Demo
 
-The webcam will start automatically and display the detected emotion in real time.
+python real_time_video.py
 
----
+You can just use this with the provided pretrained model i have included in the path written in the code file, i have choosen this specificaly since it scores the best accuracy, feel free to choose any but in this case you have to run the later file train_emotion_classifier
+> If you just want to run this demo, the following content can be skipped
+- Train
 
-## 📈 Applications
+- python train_emotion_classifier.py
 
-- Mental Health Monitoring
-- Smart Classrooms
-- Human Computer Interaction
-- Customer Feedback Analysis
-- Healthcare Systems
-- Emotion-Aware Virtual Assistants
-- Smart Surveillance Systems
 
----
+<a id="p4"></a> 
+# Dataset:
 
-## 🔮 Future Enhancements
+I have used [this](https://www.kaggle.com/c/3364/download-all) dataset
 
-- Multi-face emotion detection
-- Voice and emotion analysis integration
-- Mobile application deployment
-- Emotion trend analytics dashboard
-- Improved accuracy using advanced deep learning models
+Download it and put the csv in fer2013/fer2013/
 
----
+-fer2013 emotion classification test accuracy: 66%
 
-## 👥 Team Members
 
-- Kumar Anup
-- Lakshya Garg
-- Abhishek Gond
-- Kratika Nigam
-- Ayush Yadav
+# Credits
+This work is inspired from [this](https://github.com/oarriaga/face_classification) great work and the resources of Adrian Rosebrock helped me alot!.
 
----
+# Ongoing 
+Draw emotions faces next to the detected face.
 
-## 📜 License
+# Issues & Suggestions
 
-This project is developed for educational and research purposes.
+If any issues and suggestions to me, you can create an [issue](https://github.com/omar178/Emotion-recognition/issues).
 
----
-
-## ⭐ Acknowledgements
-
-- FER-2013 Dataset
-- OpenCV Community
-- TensorFlow & Keras
-- Kaggle
+If you like this work please help me by giving me some stars.
